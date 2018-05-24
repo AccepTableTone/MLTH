@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 
 module.exports = {
+	devtool: 'cheap-module-source-map',
 	entry: [ 'babel-polyfill', 'react-hot-loader/patch', './src/index.js' ],
 	module: {
 		rules: [
@@ -23,9 +24,15 @@ module.exports = {
 		publicPath: '/',
 		filename: 'bundle.js'
 	},
-	plugins: [ new webpack.HotModuleReplacementPlugin() ],
+	plugins: [
+		new webpack.DefinePlugin({
+			'process.env': {
+				NODE_ENV: JSON.stringify('production')
+			}
+		})
+	],
 	devServer: {
 		contentBase: './dist',
-		hot: true
+		historyApiFallback: true
 	}
 };

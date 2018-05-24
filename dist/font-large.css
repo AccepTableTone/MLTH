@@ -1,0 +1,27 @@
+.summary-text {
+	font-size: 21px;
+}
+.detail-text {
+	font-size: 15px;
+}
+.menu-text {
+	text-decoration: none;
+}
+label {
+	font-size: 16px;
+}
+select {
+	font-size: 19px;
+	line-height: 22px;
+}
+input[type=text] {
+	font-size: 19px;
+	line-height: 22px;
+}
+
+.large-font-icon {
+	color: #fff !important;
+}
+.small-font-icon {
+	color: #ccc !important;
+}
