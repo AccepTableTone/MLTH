@@ -56,21 +56,18 @@ class SearchForm extends React.Component {
 					if (predictionData.predictions[Object.keys(predictionData.predictions)[idx]].direction) {
 						predictions =
 							predictionData.predictions[Object.keys(predictionData.predictions)[idx]].direction;
+
+						break;
 					}
 				}
-
+				//if not predictions return we use provided stop title
 				if (predictions === null)
 					title = predictionData.predictions[Object.keys(predictionData.predictions)[0]].stopTitle;
-				else {
-					title = `Heading ${predictions.title}`;
-					predictions = predictions;
-				}
+				else predictions = predictions;
 			} else {
+				//again, if no predictions use stoptitle
 				if (!predictionData.predictions.direction) title = predictionData.predictions.stopTitle;
-				else {
-					predictions = predictionData.predictions.direction;
-					title = `Heading ${predictionData.predictions.direction.title}`;
-				}
+				else predictions = predictionData.predictions.direction;
 			}
 		}
 
@@ -80,6 +77,12 @@ class SearchForm extends React.Component {
 			hasError: false,
 			prediction: predictions === null ? {} : predictions,
 			routeTitle: title
+		});
+	};
+
+	clearResults = () => {
+		this.setState({
+			prediction: null
 		});
 	};
 
@@ -94,7 +97,10 @@ class SearchForm extends React.Component {
 				<div>
 					<StopIdSearchForm search={this.getPredictionByStop.bind(this)} />
 					<div className="or-container">-- or --</div>
-					<RouteSearchForm search={this.getPredictionByRouteAndStop.bind(this)} />
+					<RouteSearchForm
+						search={this.getPredictionByRouteAndStop.bind(this)}
+						clear={this.clearResults.bind(this)}
+					/>
 				</div>
 				<div>
 					{this.state.hasError ? (
@@ -102,7 +108,7 @@ class SearchForm extends React.Component {
 							Sorry, we could complete your request. Please try again later.
 						</div>
 					) : this.state.prediction !== null ? (
-						<SearchResult result={this.state.prediction} title={this.state.routeTitle} />
+						<SearchResult result={this.state.prediction} stoptitle={this.state.routeTitle} />
 					) : this.state.isLoading ? (
 						<Loader />
 					) : null}

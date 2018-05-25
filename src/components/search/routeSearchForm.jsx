@@ -82,6 +82,7 @@ class RouteSearchForm extends React.Component {
 
 	//get route stop data from api
 	getRouteStops = async (event) => {
+		this.props.clear();
 		if (event.target.value === '-1')
 			this.setState({
 				directions: [],
