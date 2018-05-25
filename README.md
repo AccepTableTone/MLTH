@@ -10,7 +10,7 @@
 - The following link proxies mlth.acceptabletone.com through a variety of device displays to give you an idea of the site responsiveness: [websiteresponsivetest.com](http://www.websiteresponsivetest.com/?url=http://mlth.acceptabletone.com/#5)
 - Code is hosted in the following repo: [github.com/AccepTableTone/MLTH](https://github.com/AccepTableTone/MLTH).
 - To run the project locally, clone the above repo, run *npm install* then *npm start*
-- The site is fully functional using Chrome 66.0, Firefox 60.0 and Microsoft Edge 41 (~~i'll admit i chuckled typing that last one~~)
+- The site is fully functional using Chrome 66.0, Firefox 60.0, Microsoft Edge 41 and IE 11 (IE 11 as you would expect, little tricky - not the same experience )
 
 
 ##### DEVIATIONS
