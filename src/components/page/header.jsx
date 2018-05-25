@@ -24,7 +24,6 @@ class Header extends React.Component {
 					<div
 						className="text-size-container"
 						onClick={() => {
-							console.log('changing');
 							this.setState({ largeFont: !this.state.largeFont });
 						}}
 					>

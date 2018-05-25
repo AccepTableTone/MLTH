@@ -153,6 +153,11 @@ class RouteSearchForm extends React.Component {
 						//if we have the route list then show drop downs
 						return contextState.routeList.length > 0 ? (
 							this.renderRouteSearchForm(contextState.routeList)
+						) : contextState.hasError ? (
+							<div className="error-container">
+								Sorry, there was an unexpected error retrieving the vehicle route list. Please try again
+								later.
+							</div>
 						) : (
 							<Loader />
 						);
