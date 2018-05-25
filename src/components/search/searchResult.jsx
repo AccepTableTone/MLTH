@@ -2,10 +2,16 @@
 import React from 'react';
 
 const getTime = (prediction) => {
-	let mins = prediction[Object.keys(prediction)[0]].minutes;
-	if (mins === '0') return `${prediction[Object.keys(prediction)[0]].seconds} seconds`;
-	else if (mins === '1') return `${mins} minute`;
-	else return `${mins} minutes`;
+	if (Array.isArray(prediction)) {
+		let mins = prediction[Object.keys(prediction)[0]].minutes;
+		if (mins === '0') return `${prediction[Object.keys(prediction)[0]].seconds} seconds`;
+		else if (mins === '1') return `${mins} minute`;
+		else return `${mins} minutes`;
+	} else {
+		if (prediction.minutes === '0') return `${prediction.seconds} seconds`;
+		else if (prediction.minutes === '1') return `${prediction.minutes} minute`;
+		else return `${prediction.minutes} minutes`;
+	}
 };
 
 const SearchResult = (props) => {

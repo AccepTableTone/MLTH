@@ -97,6 +97,37 @@
 	}
 }
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	/* IE10+ CSS styles go here */
+	.main-container {
+		width: 100%;
+	}
+	.menu-container {
+		margin-left: 10px;
+		float: left;
+	}
+	.twitter-container {
+		display: none;
+	}
+	.content-container {
+		float: left;
+		margin-left: 10px;
+		margin-bottom: 50px;
+	}
+	.footer-container {
+		clear: both;
+	}
+	.header-container {
+		height: 110px;
+	}
+	.ie-logo {
+		float: left;
+	}
+	.ie-txt {
+		float: right;
+	}
+}
+
 .menu-link {
 	background-color: #000;
 	border-bottom: 1px solid #fff;

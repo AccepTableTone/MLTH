@@ -78,7 +78,7 @@ class SearchForm extends React.Component {
 		this.setState({
 			isLoading: false,
 			hasError: false,
-			prediction: predictions,
+			prediction: predictions === null ? {} : predictions,
 			routeTitle: title
 		});
 	};

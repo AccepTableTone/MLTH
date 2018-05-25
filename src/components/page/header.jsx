@@ -16,11 +16,11 @@ class Header extends React.Component {
 	render() {
 		return (
 			<div className="header-container">
-				<div>
+				<div className="ie-logo">
 					<img src="http://ibwsurveyors.com/wp-content/uploads/ttc.png" className="logo-image" />
 					{this.state.largeFont ? <link rel="stylesheet" type="text/css" href="/font-large.css" /> : null}
 				</div>
-				<div>
+				<div className="ie-txt">
 					<div
 						className="text-size-container"
 						onClick={() => {

@@ -1,4 +1,9 @@
 import * as CONSTS from '../../config/constants';
+import 'whatwg-fetch';
+import Promise from 'promise-polyfill';
+if (!window.Promise) {
+	window.Promise = Promise;
+}
 
 export const getRouteList = () => {
 	return (dispatch) => {
