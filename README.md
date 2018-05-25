@@ -14,7 +14,7 @@
 
 
 ##### DEVIATIONS
-- Although a drop down list of possible directions was described in the 'Requirements' I opted for 2 stop lists, one for each direction; solely to bypass that extra action the user would have needed to take to get a list of stops to select from.
+- Although a drop down list of possible directions was described in the 'Requirements' I opted for a stop list for each possible direction on that route; this bypasses that extra action the user would have needed to take to get a list of stops to select from. (Although the separate lists may not be ideal when dealing with routes like 34-Eglington East, 36-Finch West and the like, I am standing by my decision)
 - After perusing the [ NextBus API specs](http://www.nextbus.com/xmlFeedDocs/NextBusXMLFeed.pdf) I added the ability to get vehicle predictions by stop ID (I used it one time and found it useful, so figured what the heck)
 - Initially when I first saw the data responses from NextBus I saw that each stop included a longitude and latitude; my seemingly endless adoration for Google maps drove me to think creating a route map with each stop marked would be fun...... relatively quickly after that I decided that wasn't the kind of fun I was interested in but I was stuck on the idea of having a route map section. Long story short, I remembered every stop has a route picture, those pictures must be somewhere, yada... yada... yada, a route maps section.
 - After the original route maps section idea I knew I needed some filler to make it look like a website so I added the TTC twitter feed, some accessiblity font sizing, and a faintly ttc.ca'ish look.
