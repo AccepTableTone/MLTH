@@ -14,7 +14,7 @@ const SiteRoutes = () => {
 				<Route exact path="/" component={SearchForm} />
 				<Route exact path="/routes" component={RouteList} />
 				<Route exact path="/routes/:id" component={RouteMap} />
-				<Route component={Home} />
+				<Route component={SearchForm} />
 			</Switch>
 		</div>
 	);

@@ -5,7 +5,7 @@ const Footer = () => {
 	return (
 		<div className="footer-container">
 			<span>
-				<a href="/Social_Media/index.jsp">
+				<a href="http://ttc.ca/Social_Media/index.jsp">
 					<img
 						style={{ margin: '0px 3px -2px 0px' }}
 						src="http://ttc.ca/images/fixedImages/youtube_footer_icon.gif"

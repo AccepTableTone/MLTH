@@ -24,7 +24,7 @@ const getTime = (direction) => {
 
 	//determine time to display
 	if (seconds < 60) time = `${seconds} seconds`;
-	else if (seconds === 60) time = `1 minute`;
+	else if (seconds === 60 || parseInt(seconds / 60, 10) === 1) time = `1 minute`;
 	else time = `${parseInt(seconds / 60, 10)} minutes`;
 
 	return (
@@ -52,7 +52,7 @@ const SearchResult = (props) => {
 			{Object.keys(props.result).length === 0 && props.result.constructor === Object ? (
 				<div className="error-container">
 					Sorry, we could not access the{' '}
-					{props.stopTitle !== '' ? (
+					{props.stoptitle !== '' ? (
 						`departure information for ${props.stoptitle}`
 					) : (
 						'request departure information'
